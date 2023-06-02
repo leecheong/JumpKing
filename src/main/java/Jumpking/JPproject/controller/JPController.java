@@ -19,7 +19,7 @@ public class JPController {
     }
 
     @GetMapping("/post")
-    public String post(){
+    public String postform(){
 
         return "post";
     }

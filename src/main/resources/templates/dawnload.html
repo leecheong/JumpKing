@@ -2,34 +2,42 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AR 점프 게임 다운로드</title>
-  <link rel="stylesheet" type="text/css" href="/CSS/dawnload.css">
+  <link rel="stylesheet" type="text/css" href="CSS/dawnload.css">
+  <script src="qrcode.min.js"></script>
 </head>
 <body>
-  <header>
-    <h1>AR 점프 게임</h1>
-    <p>리얼리티 기술을 활용한 신나는 점프 게임을 즐겨보세요!</p>
-  </header>
+<header>
+  <h1>AR 점프 게임</h1>
+  <p>리얼리티 기술을 활용한 신나는 점프 게임을 즐겨보세요!</p>
+</header>
 
-  <section class="download">
-    <h2>게임 다운로드</h2>
-    <p>아래 버튼을 클릭하여 게임을 다운로드하세요.</p>
-    <a href="game-download-link" class="download-btn">다운로드</a>
-  </section>
+<section class="download">
+  <h2>게임 다운로드</h2>
+  <p>아래 QR 코드를 스캔하여 게임을 다운로드하세요.</p>
+  <img src="Image/JumpKingQR.png" alt="이미지를 불러오지 못했습니다." width="200" height="200">
+</section>
 
-  <section class="how-to-play">
-    <h2>게임 플레이 방법</h2>
-    <ol>
-      <li>게임을 실행하세요.</li>
-      <li>카메라를 통해 실제 공간을 인식합니다.</li>
-      <li>점프하여 캐릭터를 조작하여 장애물을 피하세요.</li>
-      <li>최고 점수를 달성하여 리더보드에 이름을 올리세요.</li>
-    </ol>
-  </section>
+<section class="how-to-play">
+  <h2>게임 플레이 방법</h2>
+  <ol>
+    <li>게임을 실행하세요.</li>
+    <li>카메라를 통해 실제 공간을 인식합니다.</li>
+    <li>점프하여 캐릭터를 조작하여 장애물을 피하세요.</li>
+    <li>최고 점수를 달성하여 리더보드에 이름을 올리세요.</li>
+  </ol>
+</section>
 
-  <footer>
-    <p>&copy; 2023 AR 점프 게임. All rights reserved.</p>
-  </footer>
+<footer>
+  <p>&copy; 2023 AR 점프 게임. All rights reserved.</p>
+</footer>
+
+<script>
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+      width: 200,
+      height: 200
+    });
+    qrcode.makeCode("game-download-link");
+  </script>
 </body>
 </html>
