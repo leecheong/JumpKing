@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>데이터베이스 연동 확인</title>
+</head>
+
+<style>
+    .layout {
+        width : 500px;
+        margin : 0 auto;
+        margin-top : 40px;
+    }
+</style>
+<body>
+
+    <div clas="layout">
+        <table>
+            <thead>
+                <tr>
+                    <th>테스트 목록1</th>
+                    <th>테스트 목록2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="post:${list}">
+                    <td th:text="${post.id}">1</td>
+                    <td th:text="${post.title}">title 입니다.</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
