@@ -2,6 +2,7 @@ package Jumpking.JPproject.Entity;
 
 
 import lombok.Data;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,13 +17,14 @@ public class post {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     @Column
     private String title;
 
     @Column
     private String content;
+    //계속 id값에 null이 추가되서 생기는 오류같음
 
 }

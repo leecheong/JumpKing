@@ -35,9 +35,9 @@ public class JPController {
     public String postWrite(post Post) {
 
         jpService.write(Post);
-        System.out.println(Post.getTitle());
 
-        return "postlist";
+        return "";
+
     }
 
     @GetMapping("/post/list") //게시글 리스트 페이지
