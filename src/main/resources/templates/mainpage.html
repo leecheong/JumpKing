@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <title>AR 점프 게임 커뮤니티</title>
   <style>
@@ -67,33 +67,70 @@
     .signup-button:hover {
       background-color: #45a049;
     }
+
+    /* 수정된 부분 */
+    .session-text {
+      color: #000;
+    }
+
+    /* 로그인 및 게시판 버튼 스타일 */
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .button-container a {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      margin-right: 10px;
+      text-decoration: none;
+    }
+
+    .button-container a:hover {
+      background-color: #45a049;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>AR 점프 게임 커뮤니티</h1>
-  </header>
+<!-- 수정된 부분 -->
+<div class="session-text" th:text="${session.loginid}"></div>
 
-  <main>
-    <h2>게임 커뮤니티 소개</h2>
-    <p>AR 점프 게임 커뮤니티에 오신 것을 환영합니다! 이곳은 AR 점프 게임에 대한 정보와 토론을 나눌 수 있는 공간입니다. 게임 전략, 공략, 업데이트 소식 등 다양한 내용을 공유하고 소통할 수 있습니다.</p>
+<header>
+  <h1>AR 점프 게임 커뮤니티</h1>
+</header>
 
-    <h2>주요 기능</h2>
-    <ul>
-      <li>게임 업데이트 소식 확인</li>
-      <li>토론 게시판에서 다른 플레이어들과 소통</li>
-      <li>전략 및 팁 공유</li>
-      <li>멀티플레이어 대전 참가</li>
-      <li>커뮤니티 이벤트 및 대회 정보 확인</li>
-    </ul>
+<main>
+  <h2>게임 커뮤니티 소개</h2>
+  <p>AR 점프 게임 커뮤니티에 오신 것을 환영합니다! 이곳은 AR 점프 게임에 대한 정보와 토론을 나눌 수 있는 공간입니다. 게임 전략, 공략, 업데이트 소식 등 다양한 내용을 공유하고 소통할 수 있습니다.</p>
 
-    <h2>커뮤니티 가입</h2>
-    <p>AR 점프 게임 커뮤니티에 가입하여 다른 플레이어들과 소통하고 게임 정보를 공유해보세요!</p>
-    <a class="signup-button" href="#">지금 가입하기</a>
-  </main>
+  <h2>주요 기능</h2>
+  <ul>
+    <li>게임 업데이트 소식 확인</li>
+    <li>토론 게시판에서 다른 플레이어들과 소통</li>
+    <li>전략 및 팁 공유</li>
+    <li>멀티플레이어 대전 참가</li>
+    <li>커뮤니티 이벤트 및 대회 정보 확인</li>
+  </ul>
 
-  <footer>
-    &copy; 2023 AR 점프 게임 커뮤니티. All rights reserved.
-  </footer>
+  <h2>커뮤니티 가입</h2>
+  <p>AR 점프 게임 커뮤니티에 가입하여 다른 플레이어들과 소통하고 게임 정보를 공유해보세요!</p>
+  <a class="signup-button" href="/register">지금 가입하기</a>
+
+  <!-- 로그인 및 게시판 버튼 -->
+  <div class="button-container">
+    <a href="/user/login">로그인</a>
+    <a href="/post/list">게시판</a>
+    <a href="/user/logout">로그아웃</a>
+    <a href="/dawnload">앱 다운로드</a>
+  </div>
+</main>
+
+<footer>
+  &copy; 2023 AR 점프 게임 커뮤니티. All rights reserved.
+</footer>
 </body>
 </html>

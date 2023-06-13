@@ -1,5 +1,6 @@
 package Jumpking.JPproject.service;
 
+import Jumpking.JPproject.Entity.User;
 import Jumpking.JPproject.Entity.post;
 import Jumpking.JPproject.repository.JPRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +19,16 @@ public class JPService {
 
         jpRepository.save(Spost);
 
+
     }
     public List<post> postList() {
         return jpRepository.findAll();
     }
 
+    public post postView(Integer id){
+
+        return jpRepository.findById(id).get();
+    }
 
 }
 

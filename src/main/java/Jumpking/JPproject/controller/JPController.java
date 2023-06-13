@@ -36,7 +36,7 @@ public class JPController {
 
         jpService.write(Post);
 
-        return "";
+        return "postsucceed";
 
     }
 
@@ -46,5 +46,13 @@ public class JPController {
         model.addAttribute("list", jpService.postList());
 
         return "postlist";
+    }
+
+    @GetMapping("/post/view")
+    public String postView(Model model, Integer id){
+
+        model.addAttribute("post", jpService.postView(id));
+
+        return "postview";
     }
 }

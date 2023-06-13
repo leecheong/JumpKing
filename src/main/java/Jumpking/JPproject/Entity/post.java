@@ -17,7 +17,7 @@ public class post {
 
 
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column
@@ -25,6 +25,8 @@ public class post {
 
     @Column
     private String content;
-    //계속 id값에 null이 추가되서 생기는 오류같음
+
+    @Column
+    private String user_id;
 
 }

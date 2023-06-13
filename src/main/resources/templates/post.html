@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>게시글 작성</title>
     <style>
@@ -61,10 +61,13 @@
 <body>
 <div class="form-container">
     <h1>게시글 작성</h1>
-    <form action="post/write" method="post">
+    <form action="/post/write" method="post">
+        <div class="form-group">
+            <label for="user_id">작성자:</label>
+            <input type="text" id="user_id" name="user_id" required th:value="${session.loginid}">
+        </div>
         <div class="form-group">
             <label for="title">제목:</label>
-            <input type="text" id="id" name="id" required>
             <input type="text" id="title" name="title" required>
         </div>
         <div class="form-group">
